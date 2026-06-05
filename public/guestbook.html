@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUESTBOOK</title>
+    <link href="/guestbook.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    
+  <main class="main">
+      
+      <div>
+        wowoww
+        <iframe src="https://robdog.atabook.org/"><p>your browser does not support iframes! <a href="https://robdog.atabook.org/">please click here</a> to view the guestbook.</p></iframe> </div>
+        
+        
+      <div>
+        
+        
+        <h1>Comment Box</h1>
+        
+        <p>If you'd like to send me an anonymous comment or question, type it here. I can't see who leaves these, so if you want me to respond to you directly, make sure to provide some kind of contact information!</p>
+        <textarea rows="4" cols="50" id="question" placeholder="your message here..."></textarea>
+        <button id="send">Send</button> <br>
+        <span id="char_count">2000 out of 2000</span><span> characters left</span>
+      
+      
+      
+          <!-- script for the "send" buttons --> 
+            <script> 
+              document.getElementById('send').onclick = function() {
+              var request = new XMLHttpRequest();
+              request.open("POST", "https://discord.com/api/webhooks/1129489939336265838/80T09PfZ0UKvDkNUAQ73w4UZ4ScyBCQjLrRQ713KqtfHvOQLoVB0C12bYEUZrJ9IdhoM");
+                  request.setRequestHeader('Content-type', 'application/json');
+              var params = {
+                  username: "Question"+new Date().getTime(), // you can make this whatever you want
+                  content: document.getElementById("question").value
+              }
+              request.send(JSON.stringify(params));
+              
+              // below gives your user some helpful feedback letting them know their message has been sent
+              alert('your message has been sent! :o)');
+              // below clears the form fields after submission
+              document.getElementById("question").value = '';
+                                      } 
+            </script>
+            
+            <!-- script for character counter: https://stackabuse.com/character-counter-for-text-areas-with-vanilla-javascript/ -->
+            <script>
+              let textArea = document.getElementById("question");
+              let characterCounter = document.getElementById("char_count");
+              const maxNumOfChars = 2000;
+              
+              const countCharacters = () => {
+              let numOfEnteredChars = textArea.value.length;
+              let counter = maxNumOfChars - numOfEnteredChars;
+              characterCounter.textContent = counter + " out of 2000";
+              };
+              
+              textArea.addEventListener("input", countCharacters);
+              
+              if (counter < 0) {
+                  characterCounter.style.color = "red";
+              } else if (counter < 20) {
+                  characterCounter.style.color = "orange";
+              } else {
+                  characterCounter.style.color = "black";
+              }
+              
+              </script>
+          <!-- end script -->
+
+      
+      </div>
+    
+    </main>
+    
+  </body>
+</html>

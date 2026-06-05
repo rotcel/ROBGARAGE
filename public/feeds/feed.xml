@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Update Log</title>
+  <description> </description>
+  <link>https://robgarage.online/feed.xml</link>
+  <lastBuildDate>
+    Mon, 09 Mar 2026 19:00:42 +0000
+  </lastBuildDate>
+  <ttl>1440</ttl>
+  <atom:link href="https://robgarage.online/feed.xml" rel="self" type="application/rss+xml" />
+
+  <!-- above this is the header, below are each article -->
+
+<item>
+    <description>
+      5/2/2026: added an about and gallery page!
+    </description>
+    <pubDate>
+      Thu, 26 Feb 2026 00:34:31 +0000
+    </pubDate>
+  </item>
+
+ <item>
+    <description>
+      3/9/2026: slowly making the skeletons of pages >:D
+    </description>
+    <pubDate>
+      Mon, 09 Mar 2026 19:00:42 +0000
+    </pubDate>
+  </item>
+
+ <item>
+    <description>
+      2/25/2026: finally perfected the homepage layout
+    </description>
+    <pubDate>
+      Thu, 26 Feb 2026 00:34:31 +0000
+    </pubDate>
+  </item>
+
+
+<!-- End of the article list -->
+
+</channel>
+</rss>

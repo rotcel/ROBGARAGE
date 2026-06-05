@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAVALAMPS</title>
+    <link href="/lavalamps.css" rel="stylesheet" type="text/css" media="all">
+    
+    
+    <!-- scripts -->
+    <script type="text/javascript">
+// <![CDATA[
+var speed=100; // speed colours change, 1 second = 1000
+var glow=3; // can be set from '0' for no glow, to 10
+var raincol=new Array("#ff0000", "#ff5500", "#ffaa00", "#ffff00", "#aaff00", "#55ff00", "#00ff00", "#00ff55", "#00ffaa", "#00ffff", "#00aaff", "#0055ff", "#0000ff", "#5500ff", "#aa00ff", "#ff00ff", "#ff00aa", "#ff0055"); // change the colours if you want to
+var alink="http://www.mf2fm.com/rv/"; // page to link text to (set to ="" for no link)
+
+/****************************
+*    Rainbow Text Effect    *
+*(c)2003-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var rainbow, raintxt, raincnt=0;
+
+function addLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addLoadEvent(regenbogen);
+
+function regenbogen() { if (document.getElementById) {
+  var i, rainbeau;
+  rainbow=document.getElementById("rainbow");
+  raintxt=rainbow.firstChild.nodeValue;
+  while (rainbow.childNodes.length) rainbow.removeChild(rainbow.childNodes[0]);
+  for (i=0; i<raintxt.length; i++) {
+    rainbeau=document.createElement("span");
+    rainbeau.setAttribute("id", "rain"+i);
+    rainbeau.appendChild(document.createTextNode(raintxt.charAt(i)));
+    if (alink) {
+      rainbeau.style.cursor="pointer";
+      rainbeau.onclick=function() { top.location.href=alink; }
+    }
+    rainbow.appendChild(rainbeau);
+  }
+  rainbow=setInterval ("raining()", speed);
+}}
+
+function raining() {
+  var i, c;
+  for (i=0; i<raintxt.length; i++) {
+    c=raincol[(i+raincnt)%raincol.length];
+    document.getElementById("rain"+i).style.color=c;
+	if (glow) document.getElementById("rain"+i).style.textShadow=c+" 0px 0px "+glow+"px";
+  }
+  raincnt++;
+}
+// ]]>
+</script>
+    <!-- end scripts -->
+  </head>
+  
+  
+  <body>
+    <h1>this page is dedicated to LAVA LAMPS!!!!!!!!</h1>
+    
+    <main>
+    <h2>i love lava lamps because they're fun to watch, aesthetically impeccable, and having one in your room instantly makes you cooler. they are quite possibly the most important human invention to ever grace the earth. the concept of a little illuminated cylinder of colorful ever-fluctuating goo, the bubbles' jubilant wobbling after undergoing mitosis, even the fact they're called "lava" lamps... what's not to love about them??? they possess a uniquely comforting and nostalgic quality impossible to find in any other household light fixture.</h2>
+    
+    
+    <p>don't be fooled though: the namesake "lava" inside these lamps isn't actually lava, but wax! specifically, a special kind of wax with a low melting point and an immiscible property (meaning it doesn't mix with water), called <i>paraffin wax</i>. it's also commonly found in crayons and candles.</p>
+    
+    <p>the paraffin wax, suspended in colored water, melts from heat emitted by the lightbulb below, causing the mesmerizing motions we all know and love.</p>
+    
+    <div class="borderimg"><span id="rainbow">history</span> <p class="bluetext">a badass mother fucker named Edward Craven Walker invented the lava lamp in 1963. <a href="https://lemelson.mit.edu/resources/edward-walker">the idea came to him in 1948 when he noticed an egg timer in a bar</a> (see the illustration below), but he'd only begin work on the project around a decade later. <span class="fancyspan">presumably he was busy with... <a href="https://en.wikipedia.org/wiki/Edward_Craven_Walker#Naturism">other things</a>...</span>
+    
+    <br><br>
+    <img src="howitreallywent.png" height="300">
+    <br><br>
+    
+    they were initially marketed as "astro lamps" and saw moderate success, but it was only later in the decade when the lamp really caught on. cultural obsessions with the aesthetics of psychedelic drugs made sales skyrocket as it became adopted by hippies and Ringo Starr.</p></div></main>
+   
+  
+   
+   <!-- scripts -->
+   <!-- end scripts -->
+  </body>
+</html>

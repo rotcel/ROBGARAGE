@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY</title>
+    <link href="/gallery.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <div class="main">
+      
+      <div class="skeleton">
+        
+        <h1>stuff i've made</h1>
+      
+      <p>This page is where you can view various art I've made! Filterable by year and medium. Click on any piece to read a short blurb about it. An <a href="/gallery.xml">RSS feed<img src="rss.png" height="10"></a> is available if you'd like to be notified of new additions.</p>
+      <br>
+ 
+      	<label for="all">
+            <input type="radio" id="all" name="color">
+              <span>All</span>
+            </label>
+            
+            <h2>years</h2>
+            
+            <label for="pink">
+            <input type="radio" id="pink" name="color">
+            pink
+            </label>
+            
+            <label for="blue">
+            <input type="radio" id="blue" name="color">
+            blue
+            </label>
+
+<style>
+.collection:has(input:checked) span {
+    display: none;}
+    
+    .collection:has(#all:checked) span {
+    display: inline-block;}
+    
+    .collection:has(#pink:checked) span[class~="pink"] {
+    display: inline-block;}
+</style>
+
+<h1>FAQ</h1>
+
+<p><b>Hardware?</b> I use an iPad Pro for most of my digital art. I'll sometimes use a Wacom One 8.5x5.3" pen tablet if I'm feeling adventurous.</p>
+<p><b>Software?</b> Mainly Procreate. For animation I typically use Toonsquid or Procreate's built-in animation feature. For 3D modeling it largely depends on case-by-case needs of the project at hand; if it involves rigging I use Blender, but if not I use Nomad Sculpt.</p>
+<p><b>Other supplies?</b> For traditional art, a good ol' mechanical pencil and whatever paper is closest.</p>
+      
+      </div>
+      <div class="skeleton">
+			
+			<div class="collection">
+              <span style="background: mediumorchid;" class="pink">.</span>
+              <span style="background: blue;" class="blue">.</span>
+      </div>
+      
+      
+      </div>
+    </div>
+    
+    <!-- scripts -->
+
+   
+    <!-- end scripts -->
+    
+  </body>
+</html>

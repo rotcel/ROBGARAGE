@@ -1,0 +1,46 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background-color: black;
+  margin: auto;
+  color: white;
+}
+
+@font-face {
+  font-family: graf; 
+  src: url(gotheroin.ttf); 
+}
+
+h1 {
+  font-family: graf; 
+  color: transparent;
+  font-size: 170px;
+  text-align: center;
+  background-image: url(wall.jpeg);
+  background-clip: text;
+  position: relative;
+  top: 150px;
+}
+
+
+a {
+  color: white;
+}
+.overlay {
+    position: fixed;
+    background-image: url(rainoverlay3.gif);
+    opacity: 0.15;
+    width: 100vh;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    display: block;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    pointer-events: none;
+}

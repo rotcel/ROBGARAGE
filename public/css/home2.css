@@ -1,0 +1,401 @@
+/* main home page */
+
+
+/* styling for body */
+body {
+  background-image: url("/IMG_bggg.png");
+  background-repeat: repeat;
+}
+a {
+  color: #ff45b5;
+  display:inline-block; /* this allows us to add margin to each item 
+                           so there's space for it to rotate */
+  margin:1px;
+}
+
+
+a:hover {
+  transform:rotate(-2deg);
+  filter: contrast(150%);
+  text-decoration: none;
+}
+
+/* paw print cursor - https://www.cursors-4u.com/cursor/cat-paw-print */
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/cat-paw-print-39910841-32.webp') 32 32, auto !important;
+}
+/* End www.Cursors-4U.com Code */
+
+/* parent container */
+.container {
+ display: grid; 
+ grid-template-areas:
+ "header header"
+ "menu content";
+ grid-template-columns: 1fr 3fr;
+ gap: 10px;
+ background-color: black;
+ padding: 20px;
+}
+
+/* basic styling for the child containers */
+.container > div, header {
+  background-color: white;
+  padding: 10px;
+}
+
+/* defines the header */
+.container .header {
+  grid-area: header;
+  background-image: url(header.png);
+  background-size: cover;
+  height: 30vh;
+}
+
+/* defines the menu */
+.container .menu {
+  grid-area: menu;
+}
+
+/* mechanical border */
+.border-main {
+  border: 20px solid transparent;
+  border-image: url(main_border.png) 50 round; 
+  border-image-width: 150px;
+  border-image-outset: 35px;
+  border-image-slice: 25%;
+  padding: 10px;
+}
+
+/* same as above, but as a pseudoclass */
+  /* .border-main::before { */
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  height: 35vh;
+  width: 15vw;
+  box-sizing: border-box;
+  border: 20px solid transparent;
+  border-image: url(main_border.png) 50 stretch;
+  border-image-width: 200px;
+  border-image-outset: 20px;
+  border-image-slice: 50%;
+  padding: 10px;
+  left: 0;
+  top: 0;
+  }
+
+
+/* defines the main content area */
+.container .content {
+  grid-area: content;
+  height: 125vh;
+}
+
+/* flexbox that nests inside the main content area */
+.inner {
+  display: flex;
+  background-color: transparent;
+  z-index: -1;
+}
+
+.inner:nth-child(n) {
+  background-color: transparent;
+}
+
+/* styles the flexbox children */
+.inner .one {
+  background-color: black;
+  margin: 10px;
+  padding: 10px;
+  height: 40vh;
+  width: 100%;
+  color: white;
+  overflow-y: scroll;
+  
+}
+
+/* makes the images inside the first .inner block float right */
+.inner .one img {
+  float: right;
+}
+
+/* styles the slightly smaller flexbox child */
+.inner .two {
+  background-color: black;
+  margin: 10px;
+  padding: 5px;
+  height: 20vh;
+  width: 100%;
+  color: white;
+  overflow-y: scroll;
+}
+
+/* styles the footer */
+footer {
+ position: absolute;
+   left: 0;
+   bottom: -800px;
+ text-align: center;
+ font-size: 10px;
+ width: 100%;
+ background-color: black;
+ color: white;
+}
+
+
+/* flexbox for menu items */
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  height: 95%;
+}
+
+/* styles menu flexbox children */
+.menu-items nav, aside {
+  background-color: black;
+  width: 80%;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  flex-basis: 20%;
+  color: white;
+}
+
+/* makes divs within menu-items black */
+.menu-items div {
+  background-color: black;
+}
+
+/* styles menu-items links */
+.menu-items a {
+  color: #aafc44;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+/* rotates every other menu item */
+.menu-items a:nth-of-type(even) {
+   transform: rotate(3deg);
+   display: block;
+}
+
+.menu-items a:nth-of-type(odd) {
+   transform: rotate(-3deg);
+   display: block;
+}
+
+/* makes the second child slightly taller than the first */
+.menu-items div:nth-of-type(2) {
+  flex-basis: 40%;
+}
+
+/* little rotated div near the bottom idk what to call it 😭 */
+.thingy {
+ position: absolute; 
+ bottom: -700px;
+ right: 50px;
+ background-color: black;
+ color: white;
+ width: 200px;
+ height: 250px;
+ padding: 0;
+ transform: rotate(15deg);
+ overflow-x: clip;
+ overflow-y: auto;
+}
+
+/* statuscafe widget */
+#statuscafe {
+    padding: .5em;
+    background-color: transparent;
+    border: 1px solid midnightblue;
+    font-family: retro;
+    font-size: 14px;
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
+
+
+/* fonts */ 
+@font-face {
+  font-family: retro; /* set name */
+  src: url(retro.ttf); /* url of the font */
+}
+
+@font-face {
+  font-family: dirty;
+  src: url(dirty.ttf)
+}
+
+p {
+  font-family: retro;
+  font-size: 10px;
+  color: #99ff45;
+}
+
+b {
+  color: #45ddff;
+}
+
+h2 {
+  font-family: dirty;
+  color: #9139e3;
+}
+
+.rssdog {
+    font-size:15pt;
+}
+
+.menu-items span:nth-child(2) {
+  display: none;
+}
+
+/* styles the color when a user selects text */
+::selection {
+  color: #1f0410; 
+  background: #72ff14;
+}
+
+
+table:after {
+  content: url(rss.gif);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

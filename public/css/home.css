@@ -1,0 +1,112 @@
+
+
+body {
+  background-image: url('https://files.catbox.moe/vznb93.jpeg');
+  background-repeat: repeat;
+}
+
+.silly {
+  background-color: white;
+  border: solid;
+  }
+
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+img {
+  
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  
+  float: left;
+  background-color: black;
+  padding: 20px;
+  width: 25%;
+  margin: 10px;
+  
+}
+
+.main {
+  
+  margin: auto;
+  width: 65%;
+  background-color: aquamarine;
+  padding: 10px;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+    background-color: transparent;
+}
+
+.flex-container > div {
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 15px;
+  width: 40%;
+  height: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

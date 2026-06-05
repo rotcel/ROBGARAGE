@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Drawing app</title>
+</head>
+<body>
+ 
+    <section class="container">
+        <div id="toolbar">
+            <button id="download">download</button>
+            <label for="stroke">color</label>
+            <input id="stroke" name='stroke' type="color">
+            <label for="lineWidth">line width</label>
+            <input id="lineWidth" name='lineWidth' type="number" value="5">
+            <button id="clear">clear</button>
+            
+            <h1>send</h1>
+               <form id="imageForm">
+       <!-- <label for="webhookUrl">Discord Webhook URL:</label><br>
+        <input type="url" id="webhookUrl" name="webhookUrl" required style="width: 80%;"><br><br>-->
+        
+        <label for="imageFile">select file</label><br>
+        <input type="file" id="imageFile" name="imageFile" accept="image/png" required><br><br>
+        
+        <button type="submit">send!</button>
+    </form>
+    <p id="status"></p>
+
+    <script src="script.js"></script>
+        </div>
+        <div class="drawing-board">
+            <canvas id="drawing-board"></canvas>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

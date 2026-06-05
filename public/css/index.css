@@ -1,0 +1,207 @@
+@charset "UTF-8";
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-height: 250vh;
+}
+
+body {
+  background-color: black;
+  background-image: url(landing_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* fonts */ 
+@font-face {
+  font-family: retro; /* set name */
+  src: url(retro.ttf); /* url of the font */
+}
+
+h1 {
+  color: #ff3374;
+  text-align: center;
+  margin-top: 150px;
+}
+
+a {
+  color: #42d7f5;
+}
+
+p {
+  font-family: retro;
+  font-size: 15px;
+  text-align: center;
+  color: #4eff33;
+}
+
+ul {
+list-style-position: inside; 
+list-style-image: url("mouse.gif");
+}
+
+
+li {
+  font-family: retro;
+  font-size: 15px;
+  text-align: center;
+  color: #4eff33;
+}
+
+.main-container {
+  position: relative;
+  top: 15vh;
+  background-color: transparent;
+  background-image: url(screen_textbox.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 110vh;
+  z-index: 2;
+}
+
+
+.thing {
+  position: absolute;
+  top: 5%;
+  right: 21%;
+  background-color: transparent;
+  background-image: url(thing_pagedoll.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50%;
+  height: 50vh;
+  z-index: 3;
+  
+}
+
+.thing-tail {
+  position: absolute;
+  top: 17%;
+  left: 21%;
+  background-color: transparent;
+  background-image: url(thing_tail.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 15%;
+  height: 30vh;
+  z-index: 3;
+  
+}
+
+.textbox {
+  position: absolute;
+  top: 38%;
+  left: 29%;
+  background-color: transparent;
+  width: 70vh;
+  height: 20vh;
+  z-index: 4;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none; /* hides scrollbar in firefox */
+}
+
+#buttons {
+  position: absolute;
+  top: 46%;
+  right: 8%;
+  background-color: transparent;
+  width: 15%;
+  height: 20%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transform: rotate(10deg);
+  z-index: -2;
+  padding: 5px;
+}
+
+#entrance {
+  position: relative;
+  bottom: -60vh;
+  left: 70vh;
+  height: 70vh;
+  width: 70vh;
+  overflow: auto;
+  background-color: transparent;
+  background-image: url(door_1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+}
+
+#entrance:hover{
+  background-image: url(door_2.png);
+}
+
+/* hides scrollbar in chrome */
+::-webkit-scrollbar {
+    display: none;
+}
+
+span {
+  display: inline-block;
+  font-family: retro;
+  font-size: 15px;
+  text-align: center;
+  color: #4eff33;
+}
+
+/* caution sign icons in the main textbox */
+span::before {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background-image: url(caution_sign.gif);
+  background-size: cover;
+}
+
+span::after {
+   content: "";
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background-image: url(caution_sign.gif);
+  background-size: cover;
+}
+
+/* appears when user visits the site on a small screen */
+#smallscreen {
+    border: 5px inset #9beb34;
+    background-color: #9beb34;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    max-height: 20%;
+    margin: 0 auto;
+    display: none;
+    z-index: 10;
+  }
+  
+ #smallscreen > p {
+    color: black;
+  }
+
+  
+/* mobile responsiveness */
+@media only screen and (max-width: 1200px) {
+  html, body {background-size: contain; overflow-x: hidden; }
+  .main-container {background-size: contain;}
+  .thing {background-size: contain;}
+  .thing-tail {background-size: contain;}
+}
+
+/* makes the small screen notice appear when necessary */
+ @media only screen and (max-width: 699px) {
+            #smallscreen { display: block; }
+        }
+        @media only screen and (min-width: 700px) {
+            #smallscreen { display: none; }
+        }
+  
+

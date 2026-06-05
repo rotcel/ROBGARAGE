@@ -1,0 +1,87 @@
+body {
+  background-image: url(lavalamp_bg.GIF);
+}
+
+@font-face {
+  font-family: lavalampheader;
+  src: url(lavalampheader.otf);
+}
+
+@font-face {
+  font-family: handwriting;
+  src: url(handwriting.otf);
+}
+
+h1 {
+  font-family: lavalampheader;
+}
+
+h1:before {
+  content: url(lavalamppixel.gif);
+}
+
+h1:after {
+  content: url(lavalamppixel.gif);
+}
+
+h2 {
+  color: #ff5729;
+  font-family: handwriting;
+}
+
+p {
+  color: #ff5729;
+  font-family: handwriting;
+}
+
+a {
+  color: #fca903;
+}
+
+.fancyspan {
+  font-size: 10px;
+  color: #f0fc03;
+}
+
+span {
+  font-size: 30px;
+}
+
+main {
+  text-align: center;
+  width: 70%;
+  height: 100vh;
+  background-image: url(lavalamp_bg2.GIF);
+  margin: auto;
+  padding: 10px;
+  border: 3px solid;
+          border-image-slice: 100%;
+          border-image-source: none;
+          border-image-slice: 1;
+          border-image-source: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+}
+
+
+main > div {
+  background-image: url(lavalamp_bg4.GIF);
+  transform: rotate(2deg);
+  width: 70%;
+  max-height: 50vh;
+  margin: auto;
+  overflow: scroll;
+}
+
+.borderimg {
+  border: 10px solid transparent; /* Required for border-image */
+  padding: 15px;
+  border-image: url(border2.webp) 30 round;
+}
+
+.bluetext {
+  color: #3dffec;
+  font-family: handwriting;
+  text-shadow: black 1px 0 5px;
+}
+
+
+

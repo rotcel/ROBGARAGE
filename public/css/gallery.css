@@ -1,0 +1,79 @@
+html, body
+{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+/* flexbox to hold the main page content */
+.main {
+  display: flex;
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  left: 10;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+/* styling for the main two columns */
+.main .skeleton {
+  background-color: white;
+  margin: 10px;
+  padding: 20px;
+  overflow-x: hidden;
+  display: inline-block;
+  overflow-y: hidden;
+  
+}
+
+/* makes the left column wider than the right one, excludes grid children */
+.main .skeleton:nth-child(1):not(.one) {
+  width: 30%;
+  height: 70%;
+  align-self: flex-end;
+}
+
+.main .skeleton:nth-child(2):not(.two) {
+  width: 60%;
+}
+
+
+/* font styling */ 
+p {
+  font-family: handwriting;
+  font-size: 15px;
+}
+
+span {
+  font-family: handwriting;
+  font-size: 15px;
+}
+
+h1 {
+  font-family: voicecrack;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: handwriting;
+  src: url(handwriting.otf)
+}
+
+@font-face {
+  font-family: voicecrack;
+  src: url(voicecrack.ttf)
+}
+
+
+.collection:has(input:checked) span {
+    display: none;}
+    
+    .collection:has(#all:checked) span {
+    display: inline-block;}
+    
+    .collection:has(#pink:checked) span[class~="pink"] {
+    display: inline-block;}

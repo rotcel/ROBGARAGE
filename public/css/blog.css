@@ -1,0 +1,86 @@
+body {
+  background-color: lightgrey;
+  font-family: handwriting;
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: handwriting;
+  src: url(handwriting.otf)
+}
+
+.main {
+  display: flex;
+  background-color: black;
+  transform: rotate(-3deg);
+  position: fixed;
+  bottom: 0;
+  left: 10;
+  width: 80vw;
+  height: 90vh;
+  justify-content: space-between;
+}
+
+.main div {
+  background-color: white;
+  margin: 5px;
+  padding: 20px;
+  width: 40vw;
+  overflow-x: hidden;
+  display: inline-block;
+  
+}
+
+.main div:nth-child(1) {
+  transform: skewY(2deg);
+}
+
+.main div:nth-child(2) {
+  transform: skewY(-2deg);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: lightgrey;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+article aside {
+  background-color: white;
+  margin: 5px;
+  padding: 5px;
+  width: 90%;
+  height: 20%;
+  
+}
+
+article aside:nth-child(3){
+  height: 40%;
+  transform: rotate(2deg);
+}
+
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+aside .blog-lettering {
+  height: 170px;
+  display: block;
+  margin: auto;
+}
+
+[id] {
+display: none;
+}
+
+[id]:target {
+  display:block;
+}
+
+
