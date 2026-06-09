@@ -38,17 +38,17 @@ h3 {
 
 @font-face {
   font-family: handwriting;
-  src: url(handwriting.otf)
+  src: url(fonts/handwriting.otf)
 }
 
 @font-face {
   font-family: voicecrack;
-  src: url(voicecrack.ttf)
+  src: url(fonts/voicecrack.ttf)
 }
 
 @font-face {
   font-family: flipside;
-  src: url(flipside.ttf)
+  src: url(fonts/flipside.ttf)
 }
 
 /* end font styling */

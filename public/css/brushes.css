@@ -1,0 +1,8 @@
+@font-face {
+  font-family: handwriting;
+  src: url(fonts/handwriting.otf)
+}
+
+p {
+    font-family: handwriting;
+}
