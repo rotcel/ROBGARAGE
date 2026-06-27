@@ -5,16 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRUSHES</title>
     <link href="css/brushes.css" rel="stylesheet" type="text/css" media="all">
+
+
+    <script type="text/javascript">
+// <![CDATA[
+var speed=100; // speed colours change, 1 second = 1000
+var glow=3; // can be set from '0' for no glow, to 10
+var raincol=new Array("#ff0000", "#ff5500", "#ffaa00", "#ffff00", "#aaff00", "#55ff00", "#00ff00", "#00ff55", "#00ffaa", "#00ffff", "#00aaff", "#0055ff", "#0000ff", "#5500ff", "#aa00ff", "#ff00ff", "#ff00aa", "#ff0055"); // change the colours if you want to
+var alink="http://www.mf2fm.com/rv/"; // page to link text to (set to ="" for no link)
+
+/****************************
+*    Rainbow Text Effect    *
+*(c)2003-13 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var rainbow, raintxt, raincnt=0;
+
+function addLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addLoadEvent(regenbogen);
+
+function regenbogen() { if (document.getElementById) {
+  var i, rainbeau;
+  rainbow=document.getElementById("rainbow");
+  raintxt=rainbow.firstChild.nodeValue;
+  while (rainbow.childNodes.length) rainbow.removeChild(rainbow.childNodes[0]);
+  for (i=0; i<raintxt.length; i++) {
+    rainbeau=document.createElement("span");
+    rainbeau.setAttribute("id", "rain"+i);
+    rainbeau.appendChild(document.createTextNode(raintxt.charAt(i)));
+    if (alink) {
+      rainbeau.style.cursor="pointer";
+      rainbeau.onclick=function() { top.location.href=alink; }
+    }
+    rainbow.appendChild(rainbeau);
+  }
+  rainbow=setInterval ("raining()", speed);
+}}
+
+function raining() {
+  var i, c;
+  for (i=0; i<raintxt.length; i++) {
+    c=raincol[(i+raincnt)%raincol.length];
+    document.getElementById("rain"+i).style.color=c;
+	if (glow) document.getElementById("rain"+i).style.textShadow=c+" 0px 0px "+glow+"px";
+  }
+  raincnt++;
+}
+// ]]>
+</script>
   </head>
   <body>
   
     <h1>"What brushes do you use?"</h1>
     
-    <p><b></b>...is undoubtedly the most frequent art-related question I receive, but because I'm awful at keeping track of where I download them from, I've never been able to give a satisfactory answer... until NOW!!!! This page exists to remedy that quandary and archive the various custom brushes I use for my digital art.</p>
+    <p><b></b>...is undoubtedly the most frequent art-related question I receive, but because I'm awful at keeping track of where I download them from, I've never been able to give a satisfactory answer... until <span id="rainbow">NOW!!!!!!!</span> This page exists to remedy that quandary and archive the various custom brushes I use for my digital art.</p>
     
     <p><b>Keep in mind most of these will not work across every program.</b> Procreate brushes will likely only work on Procreate, CSP brushes will likely only work on CSP, and so on. There is probably a way to convert a certain brush from one program to another, but unless you're  willing to figure out how to do that, you're better off finding (or making) an equivalent for your program of choice.</p>
 
-    <p><b>One additional important note:</b> I've tried my very best to trace these brushes back to their original sources, but since I've had many of them for years and foolishly never saved where I found them, brushes whose creators I could not locate are marked with an X. <u>If you or someone you know made a brush(set) marked X, please contact me so I can give proper credit!!!!</u></p>
+    <p><b>One additional important note:</b> I've tried my very best to trace these brushes back to their original sources, but since I've had many of them for years and foolishly never saved where I found them, brushes whose creators I could not locate are marked with an <span class="unknown">(X)</span>. <u>If you or someone you know made a brush(set) marked <span class="unknown">(X)</span>, please contact me so I can give proper credit!!!!</u></p>
 
     <h2>Brushes I've Made</h2>
     <p>All of these are available to download on <a href="https://ko-fi.com/roboratory">my Kofi</a> for free, though tips are greatly appreciated :-)</p>
@@ -25,26 +82,26 @@
 
     <h2>Brushes I've Didn't Made</h2>
 
-    <ul><b>Procreate</b>
+    <ul><h3>Procreate</h3>
       <li><a href="https://drive.google.com/file/d/1akawejPDEGsWngYk9cOA9PxWpKSQE4LV/view"><b>lizbrushes</b></a> (free) - I use the "caca" brush from this brushet for almost all of my sketching.</li>
       <li><a href="https://milas.gumroad.com/l/UwgXO"><b>LEATHER brushes for PROCREATE</b></a> ($6) - "43 textured brushes that simulate leather."</li>
-      <li><a href="https://drive.google.com/file/d/11pOx6C9usr5xVfYg3n59BDaRLZouN82D/view?usp=sharing"><b>information</b></a> (free) (X) - 26 textured brushes for adding visual density. </li>
+      <li><a href="https://drive.google.com/file/d/11pOx6C9usr5xVfYg3n59BDaRLZouN82D/view?usp=sharing"><b>information</b></a> (free) <span class="unknown">(X)</span> - 26 textured brushes for adding visual density. </li>
       <li><a href=""><b>Dawner's Free Procreate Brush Pack Vol. 9</b></a> - 22 textured painting brushes.</li>
       <li><a href="https://ko-fi.com/s/91f17cdae0"><b>Amontis brush set</b></a> (free) - 10+ textured brushes. I like using these for sketching and inking the best.</li>
       <li><a href=""><b>FREE Comic Ink Brush Set for Procreate</b></a> - "More than 20 brushes for inking and special effects."</li>
-      <li><a href="https://drive.google.com/file/d/13kXc8-gr1aV6JafpmP6yJ2AlVLOH2TjN/view?usp=sharing"><b>Halftones</b></a> (free) (X) - Assorted halftone brushes.</li>
-      <li><a href="https://drive.google.com/file/d/1mdiIznBnJrq-izoXWlVOJlAnyrlKb_X8/view?usp=sharing"><b>Draw</b></a> (free) (X) - Various inking, information and pixel brushes.</li>
-      <li><a href="https://drive.google.com/file/d/1Rs_I5pRES_2I9BcIi4Oo9U3M8lgXnr-2/view?usp=sharing"><b>Watercolor</b></a> (free) (X) - Various watercolor brushes.</li>
-      <li><a href="https://drive.google.com/file/d/12SynEpBWpTjW2kMJGBIg_DwlGrLnBN4F/view?usp=sharing"><b>Paint</b></a> (free) (X) - Various painting and rendering brushes.</li>
+      <li><a href="https://drive.google.com/file/d/13kXc8-gr1aV6JafpmP6yJ2AlVLOH2TjN/view?usp=sharing"><b>Halftones</b></a> (free) <span class="unknown">(X)</span> - Assorted halftone brushes.</li>
+      <li><a href="https://drive.google.com/file/d/1mdiIznBnJrq-izoXWlVOJlAnyrlKb_X8/view?usp=sharing"><b>Draw</b></a> (free) <span class="unknown">(X)</span> - Various inking, information and pixel brushes.</li>
+      <li><a href="https://drive.google.com/file/d/1Rs_I5pRES_2I9BcIi4Oo9U3M8lgXnr-2/view?usp=sharing"><b>Watercolor</b></a> (free) <span class="unknown">(X)</span> - Various watercolor brushes.</li>
+      <li><a href="https://drive.google.com/file/d/12SynEpBWpTjW2kMJGBIg_DwlGrLnBN4F/view?usp=sharing"><b>Paint</b></a> (free) <span class="unknown">(X)</span> - Various painting and rendering brushes.</li>
     </ul>
 
-    <ul><b>Clip Studio Paint</b>
+    <ul><h3>Clip Studio Paint</h3>
       <li><a href="https://assets.clip-studio.com/en-us/detail?id=2174808"><b>clumpy mascara</b></a> (free) - "inking brush with a bumpy soft hatching effect! rounded and slightly grainy"</li>
       <li><a href="https://assets.clip-studio.com/en-us/detail?id=2242176"><b>squeaky pencil</b></a> (free) - "a sort of smooth but textured pencil! opacity is randomized by default and you can adjust the density how you like"</li>
       <li><a href="https://assets.clip-studio.com/en-us/detail?id=2216757"><b>scraggly liner</b></a> (free) - "scratchy size jitter ink pen with a loose feel, has options to change brush density and blending mode!"</li>
     </ul>
 
-    <ul><b>Cross-compatible</b>
+    <ul><h3>Cross-compatible</h3>
     <li><a href=""><b>Stipple Beast Evolved</b></a> (free, optional donation) - "This suite of brushes are designed to create gritty, crunchy, bold illustrations by utilizing toothy liners, stipplers, grimy texture stamps, and jittery coloring brushes, with a bonus texture overlay thrown in to bring it all together." Works on Procreate, CSP, and Krita.</li>
 
     </ul>

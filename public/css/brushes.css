@@ -1,9 +1,27 @@
 @font-face {
   font-family: handwriting;
-  src: url(fonts/handwriting.otf)
+  src: url(../fonts/handwriting.otf)
 }
 
 body {
     font-family: handwriting;
-    background: url(public/images/backgrounds/yellobg.png)
+    background: url(../images/backgrounds/yellobg.png)
 }
+
+/* marks brushes with unknown creators */
+.unknown {
+  color:rgb(216, 63, 37);
+}
+
+a {
+color:rgb(0, 147, 142)
+}
+
+b {
+  color:rgb(0, 147, 142)
+}
+
+h1, h2 {
+  color:darkorange
+}
+
