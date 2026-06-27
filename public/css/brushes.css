@@ -1,11 +1,11 @@
 @font-face {
   font-family: handwriting;
-  src: url(/fonts/handwriting.otf)
+  src: url(../fonts/handwriting.otf)
 }
 
 body {
     font-family: handwriting;
-    background: url(/images/backgrounds/yellobg.png)
+    background: url(../images/backgrounds/yellobg.png)
 }
 
 /* marks brushes with unknown creators */
