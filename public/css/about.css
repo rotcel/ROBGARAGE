@@ -134,12 +134,15 @@ button {
   background-color: black;
   color: white;
   font-size: 10px;
-  margin: auto;
-  display: block;
 }
 
 button:hover {
   cursor: pointer;
+}
+
+.funfact {
+  margin: auto;
+  display: block;
 }
 
 .ow {
