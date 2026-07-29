@@ -138,6 +138,17 @@ button {
   display: block;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
+.ow {
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  display: inline;
+}
+
 /* places the back button at the top left corner of the screen, also places it in front of everything */
 .backbutton {
   position: relative;

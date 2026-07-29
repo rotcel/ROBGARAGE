@@ -107,7 +107,7 @@ CONTACT@ROBGARAGE.ONLINE FOR QUESTIONS ;o}
           <p><b>Why "ROBGARAGE"?</b>
             <br>
             <u>Short answer:</u> I'm Rob, and this is my garage. <br>
-            <u>Long answer:</u> Much of my childhood was spent making stuff in my dad's garage, which has led me to associate garages as a concept with relaxation and creativity. A garage is a liminal space where time comes to a standstill and the pressure that comes with being human is lifted, temporarily, for as long as you exist in the space. It's an ethereal state of mind as much as a physical room. At risk of sounding corny, this is exactly what my site means to me and why you can find me in a dank room hunched over a bag of almonds scribbling manically in my sketchbook when you peek in my source code.
+            <u>Long answer:</u> Much of my childhood was spent making stuff in my dad's garage, which has led me to associate garages as a general concept with relaxation and creativity. A garage is a liminal space where time comes to a standstill and the pressure that comes with being human is lifted, temporarily, for as long as you exist in the space. It's an ethereal state of mind as much as a physical room. This is exactly what my site means to me and why you can find me in a dank room hunched over a bag of almonds scribbling manically in my sketchbook when you peek in my source code.
           </p>
           <p>
             <b>Why ROBGARAGE?</b>
@@ -163,8 +163,8 @@ CONTACT@ROBGARAGE.ONLINE FOR QUESTIONS ;o}
 
             <h3>fun trivia</h3>
             <uL>
-              <li><p>In its early days, the site was coded entirely on an iPad in the Neocities editor. (I later became sane and switched to VS Codium on my laptop.)</p></li>
-              <li><p>The site is <script language="JavaScript">
+              <li><p>In its early days, it was coded entirely on an iPad in the Neocities editor. (I later became sane and switched to VS Codium on my laptop.)</p></li>
+              <li><p>It is <script language="JavaScript">
 TargetDate = "2021-08-21T05:00:00";
 BackColor = "transparent";
 ForeColor = "black";
@@ -175,6 +175,9 @@ DisplayFormat = "%%D%% days, %%H%% hours, %%M%% minutes, and %%S%% seconds";
 FinishMessage = "It is finally here!";
 </script>
 <script language="JavaScript" src="https://rhashemian.github.io/js/countdown.js"></script> <script language="JavaScript" src="https://rhashemian.github.io/js/countdown.js"></script> old.</p></li>
+<li><p>A moderately famous hip-hop musician has witnessed me work on it.</p></li>
+<audio id="sound" src="../audio/ow.mp3" preload="auto"></audio>
+<li><p>It's alive and can feel pain. <button class="ow" id="playButton">Try it out!</button></p></li>
             </uL>
               </div>
             </div>
@@ -194,7 +197,7 @@ FinishMessage = "It is finally here!";
           <b>MOVIES + TV...</b> The Thing (1982), 2001: A Space Odyssey (1968), Mulholland Drive (2001), Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb (1964), The Silence of the Lambs (1991), UHF (1989), Office Space (1999), all of the cornetto trilogy movies, Breaking Bad, Better Call Saul, Gravity Falls, Invader Zim, Hannibal... I'll be honest I'm not as much of a cinephile as I'd like to be but I'm hoping to change that.
         </p>
         <p><b>GAMES...</b> Undertale, Deltarune, Night in the Woods, Portal (both games), The Binding of Isaac, Mewgenics, The Legend of Zelda (mostly botw), Minecraft (almost exclusively in creative mode)</p>
-        <p><b>FOODS...</b> pad thai, lamb gyros, my dad's pasta salad, yummy burger</p>
+        <p><b>OTHER...</b> machinery, old technology, computers, math, astronomy, coffee shops, human psychology, zoology, urbanism, the PNW, horror, science fiction, science in general, the paranormal (i don't believe in it necessarily but it's still fun to think about), history (especially queer history), music, art + art history, furries, ocean life, classic literature, existentialism, road trips, plushies, basking in the sun</p>
       </div>
 
       <h2>quiz results</h2>
@@ -275,6 +278,17 @@ FinishMessage = "It is finally here!";
           <noscript>uh oh! your browser doesn't support javascript or you have it turned off!!!!</noscript>
           <!-- End random fun fact generator -->
           
+          <!-- ow sound player -->
+          <script>
+        const button = document.getElementById("playButton");
+        const audio = document.getElementById("sound");
+
+        // Event listener to play the sound when the button is clicked
+        button.addEventListener("click", function() {
+            audio.play(); // Play the sound
+        });
+    </script>
+          <!-- end ow sound player -->
 
     <!-- end scripts -->
   </body>
