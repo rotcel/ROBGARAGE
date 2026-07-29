@@ -191,7 +191,9 @@ button {
   border: 2px solid black;
   overflow-x: hidden;
   overflow-y: scroll;
-  text-align: center;
+  text-align: left;
+  padding: 5px;
+  display: inline-block;
 }
 
 /* mobile accessibility */
