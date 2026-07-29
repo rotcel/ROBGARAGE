@@ -168,7 +168,7 @@ button {
 /* quiz results box */
 .quizresults {
   width: 90%;
-  height: 30vh;
+  height: 10vh;
   border: 2px solid black;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -177,6 +177,15 @@ button {
 /* cliques and fanlistings box */
 
 .cliques {
+  width: 90%;
+  height: 10vh;
+  border: 2px solid black;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.interests {
   width: 90%;
   height: 30vh;
   border: 2px solid black;
