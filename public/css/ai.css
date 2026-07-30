@@ -5,9 +5,9 @@ body {
 
 article {
     margin: auto;
-    display: block;
     width: 90vw;
     text-align: center;
+    vertical-align: middle;
 }
 
 p {
