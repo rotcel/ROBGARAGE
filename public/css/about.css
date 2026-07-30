@@ -98,7 +98,8 @@ h3 {
 
 /* styles divs inside the grid container */
 .grid-container > div {
-  background-color: gray;
+  /*background-color: gray;*/
+  background-image: url(../panel.about.png);
   padding: 10px;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -178,6 +179,7 @@ button:hover {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
 
 /* quiz results box */
 .quizresults {
