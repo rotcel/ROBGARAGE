@@ -27,6 +27,10 @@ p {
     color: orangered;
 }
 
+a {
+    color:cadetblue
+}
+
 h1, h2, h3 {
     font-family: flipside;
 }
