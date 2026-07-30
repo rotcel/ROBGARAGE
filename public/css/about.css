@@ -99,7 +99,7 @@ h3 {
 /* styles divs inside the grid container */
 .grid-container > div {
   /*background-color: gray;*/
-  background-image: url(../panel.about.png);
+  background-image: url(../images/panel_about.png);
   padding: 10px;
   overflow-y: hidden;
   overflow-x: hidden;
