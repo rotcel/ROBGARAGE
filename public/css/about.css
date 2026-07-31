@@ -33,6 +33,10 @@ h3 {
   text-transform: uppercase;
 }
 
+ul {
+  list-style-image: url(../images/icons/disc.gif)
+}
+
 .caption {
   font-family: handwriting;
   font-size: 10px;
@@ -101,7 +105,7 @@ h3 {
 /* styles divs inside the grid container */
 .grid-container > div {
   /*background-color: gray;*/
-  background-image: url(../images/panel_about.png);
+  background-image: url(../images/panel_about2.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding: 10px;
