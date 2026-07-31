@@ -129,8 +129,8 @@ h3 {
   max-height: 40vh;
 }
 
-.three {
-  background-color: transparent;
+.three, .four {
+  visibility: hidden;
 }
 
 /* snapshot of old site in 'history' section */
