@@ -214,15 +214,35 @@ button:hover {
   overflow-y: scroll;
 }
 
+
+.wood {
+  background-image: url(../images/wood.png);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(8px 8px 10px);
+}
+
+.wood:nth-of-type(odd) {
+  transform: rotate(-7deg);
+}
+
+.wood:nth-of-type(even) {
+  transform: rotate(7deg);
+}
+
 /* cliques and fanlistings box */
 
 .cliques {
   width: 90%;
   height: 10vh;
-  border: 2px solid black;
   overflow-x: hidden;
   overflow-y: scroll;
   text-align: center;
+  background-image: url(../images/panel_about3.JPG);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: drop-shadow(8px 8px 10px);
 }
 
 .interests {
