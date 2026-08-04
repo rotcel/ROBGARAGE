@@ -75,7 +75,7 @@ ul {
 /* styling for the main two columns */
 .main .skeleton {
   background-color: white;
-  background-image: url(../images/bg_about.JPG);
+  background-image: url(../images/bg_about3.JPG);
   margin: 5px;
   padding: 20px;
   overflow-x: hidden;
@@ -91,6 +91,8 @@ ul {
 
 .main .skeleton:nth-child(2):not(.two) {
   width: 30%;
+  height: 120vh;
+  overflow-y: visible;
 }
 
 /* grid */
@@ -101,7 +103,7 @@ ul {
   grid-gap: 10px;
   padding: 40px;
   background-color: black;
-  background-image: url(../images/bg_about2.JPG);
+  background-image: url(../images/bg_about4.JPG);
   
 }
 
@@ -208,10 +210,13 @@ button:hover {
 /* quiz results box */
 .quizresults {
   width: 90%;
-  height: 10vh;
-  border: 2px solid black;
+  height: 20vh;
   overflow-x: hidden;
   overflow-y: scroll;
+  background-image: url(../images/panel_about4.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  filter: drop-shadow(8px 8px 10px);
 }
 
 
@@ -239,7 +244,7 @@ button:hover {
   overflow-x: hidden;
   overflow-y: scroll;
   text-align: center;
-  background-image: url(../images/panel_about3.JPG);
+  background-image: url(../images/panel_about4.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   filter: drop-shadow(8px 8px 10px);
