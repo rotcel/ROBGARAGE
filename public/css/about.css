@@ -1,18 +1,42 @@
+/* ABOUT PAGE - MAIN PAGE CONTENT */
+
 /* basic formatting for the entire page */
 html, body
 {
-  height: 150%;
+  height: 100%;
   width: 100%;
   margin: 0;
-  overflow-y: visible;
 }
 
-/* font styling */ 
+/* fonts and text styling */ 
 p {
   font-family: handwriting;
   font-size: 13px;
   color: yellowgreen;
   text-shadow: 1px 1px 2px black;
+}
+
+@font-face {
+  font-family: handwriting;
+  src: url(../fonts/handwriting.otf)
+}
+
+@font-face {
+  font-family: voicecrack;
+  src: url(../fonts/voicecrack.ttf)
+}
+
+@font-face {
+  font-family: flipside;
+  src: url(../fonts/flipside.ttf)
+}
+
+a {
+  color: yellowgreen;
+}
+
+a:visited {
+  color: yellow;
 }
 
 h1 {
@@ -34,44 +58,42 @@ h3 {
   text-transform: uppercase;
 }
 
+/* makes bullet points discs */
 ul {
   list-style-image: url(../images/icons/disc.gif)
 }
 
+/* tiny caption underneath the old site snapshot */
 .caption {
   font-family: handwriting;
   font-size: 10px;
 }
-
-@font-face {
-  font-family: handwriting;
-  src: url(../fonts/handwriting.otf)
-}
-
-@font-face {
-  font-family: voicecrack;
-  src: url(../fonts/voicecrack.ttf)
-}
-
-@font-face {
-  font-family: flipside;
-  src: url(../fonts/flipside.ttf)
-}
-
-/* end font styling */
+/* end fonts and text styling */
 
 /* flexbox to hold the main page content */
 .main {
   display: flex;
   background-color: black;
   background-image: url(../images/caution.JPG);
+  background-attachment: local;
   position: fixed;
   bottom: 0;
   left: 10;
   width: 100%;
   height: 100%;
   justify-content: space-between;
+  overflow-y: scroll;
 }
+
+/* tiny gifs before and after the header text "who runs this thing anyway?" */
+#whoruns::before {
+  content: url(../images/icons/eye2.gif)
+}
+
+#whoruns::after {
+  content: url(../images/icons/eye2.gif)
+}
+
 
 /* styling for the main two columns */
 .main .skeleton {
@@ -92,8 +114,7 @@ ul {
 
 .main .skeleton:nth-child(2):not(.two) {
   width: 30%;
-  height: 120vh;
-  overflow-y: visible;
+  height: 140vh;
 }
 
 /* grid */
@@ -160,22 +181,23 @@ iframe {
 /* button styling */
 button {
   background-color: black;
-  color: white;
+  color: yellowgreen;
   font-size: 10px;
 }
 
+/* changes the cursor to a pointer when hovering over a button */
 button:hover {
   cursor: pointer;
 }
 
+/* specific styling for the fun fact button, 'margin: auto' places it in the middle and 'display: block' is a necessary specification for it to be positioned */
 .funfact {
   margin: auto;
   display: block;
 }
 
+/* specific styling for the 'try it out' button */
 .ow {
-  background-color: black;
-  color: white;
   font-size: 10px;
   display: inline;
 }
@@ -211,7 +233,7 @@ button:hover {
 /* quiz results box */
 .quizresults {
   width: 90%;
-  height: 20vh;
+  height: 30vh;
   overflow-x: hidden;
   overflow-y: scroll;
   background-image: url(../images/panel_about4.jpg);
@@ -220,7 +242,7 @@ button:hover {
   filter: drop-shadow(8px 8px 10px);
 }
 
-
+/* wood sign thingies */
 .wood {
   background-image: url(../images/wood.png);
   background-size: 70% 100%;
@@ -229,6 +251,7 @@ button:hover {
   filter: drop-shadow(8px 8px 10px);
 }
 
+/* rotates every other sign */
 .wood:nth-of-type(odd) {
   transform: rotate(-7deg);
 }
@@ -238,10 +261,9 @@ button:hover {
 }
 
 /* cliques and fanlistings box */
-
 .cliques {
   width: 90%;
-  height: 10vh;
+  height: 30vh;
   overflow-x: hidden;
   overflow-y: scroll;
   text-align: center;
@@ -251,6 +273,7 @@ button:hover {
   filter: drop-shadow(8px 8px 10px);
 }
 
+/* interests box */
 .interests {
   background-image: url(../images/panel_about3.JPG);
   background-repeat: no-repeat;
@@ -266,12 +289,16 @@ button:hover {
   display: inline-block;
 }
 
+/* makes the text in the interests box fade as you scroll */
 .interests > article {
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
   mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
   max-height: 100%;
   overflow-y: scroll;
 }
+
+
+/* END MAIN PAGE CONTENT */
 
 /* mobile accessibility */
 
