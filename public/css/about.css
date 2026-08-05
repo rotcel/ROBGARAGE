@@ -53,6 +53,8 @@ h2 {
 
 h3 {
   font-family: flipside;
+  color: yellowgreen;
+  filter: drop-shadow(4px 4px 2px black);
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -70,9 +72,20 @@ ul {
 }
 /* end fonts and text styling */
 
+.centerheading {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: block;
+  background: #001017;
+background: linear-gradient(90deg,rgba(0, 16, 23, 0) 34%, rgba(0, 33, 33, 1) 50%, rgba(237, 221, 83, 0) 64%);
+}
+
 /* flexbox to hold the main page content */
 .main {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   background-color: black;
   background-image: url(../images/caution.JPG);
   background-attachment: local;
@@ -83,6 +96,14 @@ ul {
   height: 100%;
   justify-content: space-between;
   overflow-y: scroll;
+}
+
+.main > .otherstuffflex {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  top: 100vh;
+  left: 1vw;
 }
 
 /* tiny gifs before and after the header text "who runs this thing anyway?" */
@@ -325,15 +346,34 @@ button:hover {
 
 .otherstuffflex {
   display: flex;
-  width: 100%;
-  height: 100%;
-  position: static;
-  bottom: 0;
+  width: 70%;
+  height: 50%;
+  justify-content: flex-end;
 }
 
 .otherstuffflex > div {
   background-color: black;
   color: yellowgreen;
+  margin: 1vw;
+  background-image: url(../images/panel_about4.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 10px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  min-width: 20vh;
+   max-height: 50vh;
+   filter: drop-shadow(8px 8px 10px black);
+}
+
+.otherstuffflex .one {
+  width: 40vw;
+  transform: rotate(4deg);
+}
+
+.otherstuffflex .two {
+  width: 50vw;
+  transform: rotate(-5deg);
 }
 
 /* END MAIN PAGE CONTENT */
