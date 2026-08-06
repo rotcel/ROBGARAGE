@@ -367,6 +367,16 @@ button:hover {
    filter: drop-shadow(8px 8px 10px black);
 }
 
+.otherstuffflex > img {
+  display: block;
+  margin: auto;
+  max-width: 100px;
+  max-height: 100px;
+  border: 2px dotted yellowgreen;
+  filter: drop-shadow(4px 4px 8px black);
+  filter: opacity(50%);
+}
+
 .otherstuffflex .one {
   width: 40vw;
   transform: rotate(4deg);
