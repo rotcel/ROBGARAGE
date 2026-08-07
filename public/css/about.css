@@ -33,6 +33,12 @@ p {
 
 a {
   color: yellow;
+  display: inline-block;
+}
+
+a:hover {
+  transform: rotate(2deg);
+  transform: scale(95%);
 }
 
 a:visited {
@@ -367,7 +373,7 @@ button:hover {
    filter: drop-shadow(8px 8px 10px black);
 }
 
-.otherstuffflex > img {
+.kinlist {
   display: block;
   margin: auto;
   max-width: 100px;
@@ -391,7 +397,7 @@ table.minimalistBlack {
   border: 1px solid yellowgreen;
   background-color: transparent;
   width: 100%;
-  text-align: left;
+  text-align: center;
   border-collapse: collapse;
 }
 table.minimalistBlack td, table.minimalistBlack th {
