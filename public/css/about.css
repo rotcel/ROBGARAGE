@@ -401,7 +401,7 @@ table.minimalistBlack {
   border-collapse: collapse;
 }
 table.minimalistBlack td, table.minimalistBlack th {
-  border: 1px dotted yellowgreen;
+  border: 0px dotted yellowgreen;
   padding: 9px 3px;
 }
 table.minimalistBlack tbody td {
