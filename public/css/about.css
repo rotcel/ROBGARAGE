@@ -71,6 +71,12 @@ ul {
   list-style-image: url(../images/icons/disc.gif)
 }
 
+s {
+  text-decoration-style: wavy;
+  text-decoration-thickness: 1px; 
+  text-decoration-color: red; 
+}
+
 /* tiny caption underneath the old site snapshot */
 .caption {
   font-family: handwriting;
