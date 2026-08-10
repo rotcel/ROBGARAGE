@@ -9,7 +9,133 @@
   </head>
   <body>
     
+ 
+
+<script language="JavaScript">
+	<!--
+	function process()
+	{
+	    var rose = 0;
+	    var tulip = 0;
+	    var  lupine= 0;
+	    var lily = 0;
+	        var f = document.f;
+	    var i = 0;
+	 
+	    for (i = 0; i < f.one.length; i++) if (f.one[i].checked) value = f.one[i].value;
+	    if (value == "1") { rose++; }
+	    if (value == "2") { tulip++; }
+	    if (value == "3") { lupine++; }
+	    if (value == "4") { lily++; }
+	    
+	 
+	    for (i = 0; i < f.two.length; i++) if (f.two[i].checked) value = f.two[i].value;
+	    if (value == "1") { rose++; }
+	    if (value == "2") { tulip++; }
+	    if (value == "3") { lupine++; }
+	    if (value == "4") { lily++; }
+	    
+	    for (i = 0; i < f.three.length; i++) if (f.three[i].checked) value = f.three[i].value;
+	    if (value == "1") { rose++; }
+	    if (value == "2") { tulip++; }
+	    if (value == "3") { lupine++; }
+	    if (value == "4") { lily++; }
+	    
+	 
+	 
+	    for (i = 0; i < f.four.length; i++) if (f.four[i].checked) value = f.four[i].value;
+	    if (value == "1") { rose++; }
+	    if (value == "2") { tulip++; }
+	    if (value == "3") { lupine++; }
+	    if (value == "4") { lily++; }
+	    
+	 
+	    
+	    for (i = 0; i < f.five.length; i++) if (f.five[i].checked) value = f.five[i].value;
+	    if (value == "1") { rose++; }
+	    if (value == "2") { tulip++; }
+	    if (value == "3") { lupine++; }
+	    if (value == "4") { lily++; }
+	 
+	    for (i = 0; i < f.six.length; i++) if (f.six[i].checked) value = f.six[i].value;
+	    if (value == "1") { rose++; }
+	    if (value == "2") { tulip++; }
+	    if (value == "3") { lupine++; }
+	    if (value == "4") { lily++; }
+	    
+	 
+	 
+	    var out = "rose";
+	    i = rose;
+	    if (rose > i) { out = "rose"; i = rose; }
+	    if (tulip > i) { out = "tulip"; i = tulip; }
+	    if (lupine > i) { out = "lupine"; i = lupine; }
+	    if (lily > i) { out = "lily"; i = lily; }
+	 
+	    location.href = out + ".html";
+	}
+	function err(msg, url, line)
+	{
+	        location.href = "error.html";
+	}
+	//window.onerror = err;
+	// -->
+
+</script>
     
-    
+
+Code
+
+	<form name="f">
+	</font><font color="black"><b>which of these colors do you like more</b><br>
+	<input type="radio" name="one" value="1">red<br>
+	<input type="radio" name="one" value="2">yellow<br>
+	<input type="radio" name="one" value="3">purple<br>
+	<input type="radio" name="one" value="4">orange<br>
+	 
+	<br><br>
+	</font>
+	<font color="black"><b>whats your fashion style</b><br>
+	<input type="radio" name="two" value="1">everything elegant and pretty<br>
+	<input type="radio" name="two" value="2">anything comftorable<br>
+	<input type="radio" name="two" value="3">preppy<br>
+	<input type="radio" name="two" value="4">goth<br>
+	 
+	</font>
+	<br><br>
+	 
+	<font color="black"><b>whats your kind of movie</b><br>
+	<input type="radio" name="three" value="1">romance<br>
+	<input type="radio" name="three" value="2">comedy<br>
+	<input type="radio" name="three" value="3">action<br>
+	<input type="radio" name="three" value="4">scary<br>
+	 
+	</font><br><br>
+	 
+	<font color="black"><b>your would rather:</b><br>
+	<input type="radio" name="four" value="1">eat<br>
+	<input type="radio" name="four" value="2">run<br>
+	<input type="radio" name="four" value="3">watch tv<br>
+	<input type="radio" name="four" value="4">hang out with friends<br>
+	</font>
+	<br><br>
+	 
+	<font color="black"><b>whats your favorite candy of these:</b><br>
+	<input type="radio" name="five" value="1">twizzlers<br>
+	<input type="radio" name="five" value="2">m &amp; m's <br>
+	<input type="radio" name="five" value="3">snickers<br>
+	<input type="radio" name="five" value="4">starburst<br>
+	<br>
+	<font color="black"><b>your ideal friend is:</b><br>
+	<input type="radio" name="six" value="1">trustworthy<br>
+	<input type="radio" name="six" value="2">honest<br>
+	<input type="radio" name="six" value="3">fun<br>
+	<input type="radio" name="six" value="4">caring<br>
+	 
+	 
+	 
+	<br>
+	<input type="button" value=" WHATS YOUR FLOWER? " onclick="process();" style="font-family:veranda; font-size=8pt; border:1; border-color:orange;  border-style:solid; background-color:white"><br><br><br>
+
   </body>
 </html>

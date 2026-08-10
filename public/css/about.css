@@ -228,6 +228,11 @@ button:hover {
   cursor: pointer;
 }
 
+.divider {
+  margin: auto;
+  display: block;
+}
+
 /* specific styling for the fun fact button, 'margin: auto' places it in the middle and 'display: block' is a necessary specification for it to be positioned */
 .funfact {
   margin: auto;
