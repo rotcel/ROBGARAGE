@@ -16,6 +16,11 @@ p {
   text-shadow: 1px 1px 2px black;
 }
 
+p::highlight {
+  color: black;
+  background-color: yellowgreen;
+}
+
 @font-face {
   font-family: handwriting;
   src: url(../fonts/handwriting.otf)
